@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout com Seções</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      background-color: #ffffff;
+      border: 2px solid #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Seção com cabeçalho */
+    .header-section {
+      border-bottom: 2px solid #ccc;
+      background-color: #fdfdfd;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 150px;
+      padding: 20px;
+      background-color: #cce5ff;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      border: 2px solid #333;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+
+    .nav a:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Outras seções */
+    section {
+      padding: 30px;
+      border-top: 2px solid #ddd;
+    }
+
+    .sec1 {
+      background-color: #e6ffe6;
+    }
+
+    .sec2 {
+      background-color: #fff3cd;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Seção com cabeçalho -->
+    <section class="header-section">
+      <div class="header">
+        <div class="logo">LOGO</div>
+        <div class="nav">
+          <a href="#">Início</a>
+          <a href="#">Sobre</a>
+          <a href="#">Serviços</a>
+          <a href="#">Contato</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 1 -->
+    <section class="sec1">
+      <h2>Seção 1 - Introdução</h2>
+      <p>Esta seção pode conter um texto introdutório ou uma chamada para ação. A cor de fundo ajuda a separar visualmente os blocos de conteúdo.</p>
+    </section>
+
+    <!-- Seção 2 -->
+    <section class="sec2">
+      <h2>Seção 2 - Conteúdo</h2>
+      <p>Aqui você pode apresentar informações detalhadas, imagens ou listas. O uso de seções permite organizar o conteúdo de forma clara e acessível.</p>
+    </section>
+
+  </div>
+
+</body>
+</html>
