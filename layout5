@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Responsivo com CSS Grid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      background-color: #ffffff;
+      border: 2px solid #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Cabeçalho */
+    .header-section {
+      border-bottom: 2px solid #ccc;
+      background-color: #fdfdfd;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      align-items: center;
+    }
+
+    .logo {
+      background-color: #cce5ff;
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .nav {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 15px;
+      justify-content: end;
+      padding: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      border: 2px solid #333;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+
+    .nav a:hover {
+      background-color: #e0e0e0;
+    }
+
+    section {
+      padding: 30px;
+      border-top: 2px solid #ddd;
+    }
+
+    .sec1 {
+      background-color: #e6ffe6;
+    }
+
+    .sec2 {
+      background-color: #fff3cd;
+    }
+
+    /* Estruturas paralelas com Grid */
+    .parallel-structures {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .box {
+      background-color: #ffffff;
+      border: 2px solid #333;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+
+    /* Tablet */
+    @media (max-width: 768px) {
+      .header-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .nav {
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
+    }
+
+    /* Celular */
+    @media (max-width: 480px) {
+      .logo {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .nav {
+        display: none; /* Esconde menu */
+      }
+
+      .parallel-structures {
+        grid-template-columns: 1fr; /* Empilha blocos */
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Cabeçalho -->
+    <section class="header-section">
+      <div class="logo">LOGO</div>
+      <div class="nav">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+      </div>
+    </section>
+
+    <!-- Seção 1 -->
+    <section class="sec1">
+      <h2>Seção 1 - Introdução</h2>
+      <p>Esta seção contém um texto introdutório sobre o site.</p>
+    </section>
+
+    <!-- Seção 2 com estruturas paralelas -->
+    <section class="sec2">
+      <h2>Seção 2 - Estruturas Paralelas com Grid</h2>
+      <div class="parallel-structures">
+        <div class="box">
+          <h3>Bloco A</h3>
+          <p>Conteúdo do primeiro bloco paralelo.</p>
+        </div>
+        <div class="box">
+          <h3>Bloco B</h3>
+          <p>Conteúdo do segundo bloco paralelo.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
